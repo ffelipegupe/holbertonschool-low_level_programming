@@ -4,7 +4,6 @@
  * main - function that prints a string
  * 
  * Description: prints a string using puts
- *
  * Return: 0 to end the program
  *
  */
