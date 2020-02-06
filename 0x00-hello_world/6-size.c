@@ -19,6 +19,6 @@ int main(void)
   printf("Sice of a int: %lu byte(s)\n", (unsigned long)sizeof(i));
   printf("Sice of a long int: %lu byte(s)\n", (unsigned long)sizeof(g));
   printf("Sice of a long long int: %lu byte(s)\n", (unsigned long)sizeof(l));
-  printf("Sice of a long float: %lu byte(s)\n", (unsigned long)sizeof(f));
+  printf("Sice of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
   return (0);
 }
