@@ -5,7 +5,6 @@
  * 
  * Description: prints a string using puts
  * Return: 0 to end the program
- *
  */
 int main (void)
 {
