@@ -1,6 +1,6 @@
 #include<studio.h>
 
-/*
+/**
  * main - function that prints a string
  * 
  * Description: prints a string using puts
