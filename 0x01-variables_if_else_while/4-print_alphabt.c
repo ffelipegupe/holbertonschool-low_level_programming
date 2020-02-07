@@ -1,6 +1,5 @@
 #include <stdio.h>
 /**
- *
  * main - function that prints a string
  *
  * Description: function that prints the alphabet without the e and the q
