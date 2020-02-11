@@ -4,7 +4,7 @@
  * @n - number to be computed
  *
  * Description: function that computes the absolute value of an integer
- * Return: 0
+ * Return: the absolute value of paramter
  */
 int _abs(int n)
 {
