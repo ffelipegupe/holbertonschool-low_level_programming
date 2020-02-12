@@ -4,6 +4,6 @@
 #include <stdio.h>
 
 void positive_or_negative(int i);
-int largest_numer(int a, int b, int c);
+int largest_numer(int, int, int);
 
 #endif /* HOLBERTON_H */
