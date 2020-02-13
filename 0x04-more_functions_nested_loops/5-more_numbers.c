@@ -4,6 +4,7 @@
  * more_numbers - function that prints numbers
  *
  * Description: function that prints 10 times the numbers 0 through 14
+ * Return: table
  */
 
 void more_numbers(void)
