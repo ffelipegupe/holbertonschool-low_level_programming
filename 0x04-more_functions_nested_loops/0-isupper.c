@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _issupeper - function checks a character
+ * _isupper - function checks a character
  * @c: character to check
  *
  * Description: function that checks for uppercase character
