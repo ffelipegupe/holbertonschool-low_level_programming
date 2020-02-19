@@ -5,7 +5,7 @@
  * @s: string to be checked
  *
  * Description: function that returns the lenght of a string
- * Returns: nothing
+ * Return: i, the lenght of the string
  */
 
 int _strlen(char *s)
