@@ -20,7 +20,7 @@ char *rot13(char *s)
 		j = 0;
 		while (j < 52)
 		{
-			if(s[i] == ab[j])
+			if (s[i] == ab[j])
 			{
 				s[i] = ro[j];
 				break;
