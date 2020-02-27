@@ -18,8 +18,7 @@ int compare(char *s1, char *s2, int i, int w)
 	if (s1[i] == '\0' && s2[w] == '*')
 		return (compare(s1, s2, i, w + 1));
 	if (s2[w] == '*')
-		return (compare(s1, s2, i + 1, w) || compare(s1, s2, i,
- w + 1));
+		return (compare(s1, s2, i + 1, w) || compare(s1, s2, i, w + 1));
 	return (0);
 }
 
