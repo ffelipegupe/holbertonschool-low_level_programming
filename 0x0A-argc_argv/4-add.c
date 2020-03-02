@@ -30,6 +30,6 @@ int main(int argc, char **argv)
 		add = add + atoi(argv[i]);
 		i++;
 	}
-	printf("%d\n@", add);
+	printf("%d\n", add);
 	return (0);
 }
