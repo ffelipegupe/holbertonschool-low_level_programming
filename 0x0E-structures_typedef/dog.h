@@ -12,13 +12,13 @@
 
 typedef struct dog
 {
-	char *name:
+	char *name;
 	float age;
 	char *owner;
 } dog_t;
 /* Function protoypes */
 int _putchar(char c);
-voit init_dog(struct dog *d, char *name, float age, char *owner);
+void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
