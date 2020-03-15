@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
-
 /**
  * print_char - function that prints a char
  * @alist: argument to pass
@@ -17,7 +16,6 @@ void print_char(va_list alist)
  * @alist: argument to pass
  * Return: nothing
  */
-
 void print_float(va_list alist)
 {
 	printf("%f", va_arg(alist, double));
@@ -27,7 +25,6 @@ void print_float(va_list alist)
  * @alist: argument to pass
  * Return: nothing
  */
-
 void print_int(va_list alist)
 {
 	printf("%d", va_arg(alist, int));
@@ -37,25 +34,21 @@ void print_int(va_list alist)
  * @alist: argument to pass
  * Return: nothing
  */
-
 void print_string(va_list alist)
 {
 	char *ptr;
 
-	ptr = va_arg(alist, char*);
+	ptr = va_arg(alist, char *);
 	if (!ptr)
-		printf("(nil)");
-	else
-		printf("%s", ptr);
+		ptr = "(nil)";
+	printf("%s", ptr);
 }
-
 /**
  * print_all - function that print anything
  * @format: list of types of arguments
  *
  * Return: nothing
  */
-
 void print_all(const char * const format, ...)
 {
 	va_list alist;
@@ -65,8 +58,9 @@ void print_all(const char * const format, ...)
 		{'f', print_float},
 		{'s', print_string}
 	};
-	unsigned int i = 0;
-	unsigned int j;
+	int i = 0;
+	int j;
+	char *comma = "";
 
 	va_start(alist, format);
 	while (format && format[i])
@@ -76,14 +70,14 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == sel[j].c)
 			{
+				printf("%s", comma);
 				sel[j].f(alist);
-				if (format[i + 1])
-					printf(", ");
+				comma = ", ";
 			}
 			j++;
 		}
 		i++;
 	}
-	va_end(alist);
 	printf("\n");
+	va_end(alist);
 }
