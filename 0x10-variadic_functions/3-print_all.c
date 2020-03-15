@@ -42,7 +42,7 @@ void print_string(va_list alist)
 {
 	char *ptr = va_arg(alist, char*);
 	if (ptr == NULL)
-		printf("%p", ptr);
+		printf("%s", "(nil)");
 	else
 		printf("%s", ptr);
 }
