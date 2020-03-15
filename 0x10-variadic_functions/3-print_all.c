@@ -40,7 +40,9 @@ void print_int(va_list alist)
 
 void print_string(va_list alist)
 {
-	char *ptr = va_arg(alist, char*);
+	char *ptr;
+
+	ptr = va_arg(alist, char*);
 	if (!ptr)
 		printf("(nil)");
 	else
