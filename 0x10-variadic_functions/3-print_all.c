@@ -40,7 +40,13 @@ void print_int(va_list alist)
 
 void print_string(va_list alist)
 {
-	printf("%s", va_arg(alist, char *));
+	char *ptr;
+
+	ptr = va_arg(alist, char*);
+	if (!ptr)
+		printf("(nil)");
+	else
+		printf("%s", ptr);
 }
 
 /**
@@ -59,8 +65,8 @@ void print_all(const char * const format, ...)
 		{'f', print_float},
 		{'s', print_string}
 	};
-	int i = 0;
-	int j;
+	unsigned int i = 0;
+	unsigned int j;
 
 	va_start(alist, format);
 	while (format && format[i])
@@ -78,6 +84,6 @@ void print_all(const char * const format, ...)
 		}
 		i++;
 	}
-	printf("\n");
 	va_end(alist);
+	printf("\n");
 }
