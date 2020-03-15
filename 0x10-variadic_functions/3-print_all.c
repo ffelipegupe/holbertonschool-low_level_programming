@@ -40,7 +40,11 @@ void print_int(va_list alist)
 
 void print_string(va_list alist)
 {
-	printf("%s", va_arg(alist, char *));
+	char *ptr = va_arg(alist, char*);
+	if (ptr == NULL)
+		printf("%p", ptr);
+	else
+		printf("%s", ptr);
 }
 
 /**
