@@ -1,4 +1,4 @@
-#include <stdlib.h>
+ #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
@@ -32,20 +32,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new_node;
 		return (new_node);
 	}
-	while (tmp != NULL)
+	while (i != idx - 1)
 	{
-		if (i > idx)
-		{
-			return (NULL);
-		}
-		if (i == idx - 1)
-		{
-			new_node->n = n;
-			new_node->next = tmp->next;
-			tmp->next = new_node;
-		}
-		i++;
 		tmp = tmp->next;
+		if (tmp == NULL)
+			return (NULL);
+		i++;
 	}
+	new_node->n = n;
+	new_node->next = tmp->next;
+	tmp->next = new_node;
 	return (new_node);
 }
