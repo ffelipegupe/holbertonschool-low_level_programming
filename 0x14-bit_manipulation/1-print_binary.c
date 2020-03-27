@@ -30,7 +30,7 @@ void print_binary(unsigned long int n)
 	while (tam >= 0)
 	{
 		c = (n >> tam) & 1;
-		if(ban == 1)
+		if (ban == 1)
 			putchar(c + '0');
 		else
 		{
