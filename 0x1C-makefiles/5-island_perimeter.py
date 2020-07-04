@@ -10,11 +10,11 @@ def island_perimeter(grid):
             if grid[width][height] == 1:
                 l += 4
                 if grid[width][height + 1] == 1:
-                    l -=1
+                    l -= 1
                 if grid[width][height - 1] == 1:
                     l -= 1
                 if grid[width + 1][height] == 1:
                     l -= 1
                 if grid[width - 1][height] == 1:
-                    l -= 1    
+                    l -= 1
     return(l)
